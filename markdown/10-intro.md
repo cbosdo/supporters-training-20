@@ -1,21 +1,39 @@
-<!-- .slide: data-state="cover" id="template-cover-page" data-timing="20" data-menu-title="Cover slide" -->
+<!-- .slide: data-state="cover" id="cover-page" data-timing="20" -->
+<div class="date-location">July 15, 2020, SUPPORTERS TRAINING</div>
+
 <div class="title">
-    <h1>SUSE<sub>&reg;</sub> Presentation</h1>
-    <h2>Guidelines and Template</h2>
+    <h1>Virtualization, what's new in 4.1</h1>
+    <h2>Storage support</h2>
 </div>
 
-<div class="date-location">March 20, 2020, CITY NAME</div>
+
+<!-- .slide: data-state="normal toc" id="agenda" data-timing="20s" data-menu-title="Agenda" -->
+## Agenda
+
+<div class="breadcrumbs">Introduction</div>
+
+1. Minor changes
+> Collection of tiny changes
+
+1. Storage Pools and Volumes
+> New UI for storage management
+
+1. Virtual Machine Disks
+> Changes in the VM creation
 
 
-<!-- .slide: data-state="normal" id="template-agenda" data-menu-title="Agenda" -->
-## Contents / agenda
+<!-- .slide: data-state="normal contact" id="contact" data-timing="20s" data-menu-title="Contact" -->
+## Contact
 
-<h3>
-Welcome to the [`reveal.js`](https://github.com/hakimel/reveal.js/)
-version of the guidelines and template for SUSE presentations.
-</h3>
+<div class="breadcrumbs">Introduction</div>
 
-It contains the following slides (you can also press `m` at any
-time to reveal a navigation menu):
-
-*   Presentation template slides
+<div class="contacts">
+  <div class="contact">
+    <figure class="picture">
+      <img data-src="images/cbosdo.jpg" alt="Picture" />
+    </figure>
+    <div class="name">Cédric Bosdonnat</div>
+    <div class="job">Senior Software Engineer</div>
+    <div class="email">cbosdonnat@suse.com</div>
+  </div>
+</div>
