@@ -1,27 +1,3 @@
-<!-- .slide: data-state="divider" id="minor-changes" data-timing="20s" data-menu-title="Minor Changes" -->
-# Minor Changes
-
-Note:
-
-* Graphical console SSL simplified
-
-
-<!-- .slide: data-state="normal" id="vm-creation-notification" data-timing="20s" data-menu-title="VM Creation Notification" -->
-# VM creation notification
-
-<div class="breadcrumbs">Introduction / Minor Changes</div>
-
-![Screenshot with pending VM creation action](images/new-vm-notification.png "Screenshot")
-
-
-<!-- .slide: data-state="normal" id="formula" data-timing="20s" data-menu-title="Virtualization Host Formula" -->
-# Virtualization Host Formula
-
-<div class="breadcrumbs">Introduction / Minor Changes</div>
-
-![Screenshot of virtualization host formula](images/formula.png "Screenshot")
-
-
 <!-- .slide: data-state="subchapter" id="pool-volumes" data-timing="20s" data-menu-title="Pools and Volumes" -->
 # Storage Pools and Volumes
 
@@ -31,17 +7,23 @@ Note:
 
 <div class="breadcrumbs">Introduction / Minor Changes / Pools & Volumes</div>
 
-**Pool**: unit containing files or volumes to be used as VM disks
-<!-- .element class="fragment" -->
+```xml
+<disk type='file' device='disk'>
+  <driver name='qemu' type='qcow2'/>
+  <source file='/public/vms/myvm'/>
+  <target dev='vda' bus='virtio'/>
+</disk>
+```
+<!-- .element class="column fragment" --> 
 
-**Driver**: libvirt code handling actual storage actions. One for each pool type.
-<!-- .element class="fragment" -->
-
-* **Volume**
-  * Contained in a pool
-  * partition, LV, Rados or iSCSI volume
-
-<!-- .element class="col1 fragment" -->
+```xml
+<disk type='volume' device='disk'>
+  <driver name='qemu' type='qcow2'/>
+  <source pool='vms' volume='myvm'/>
+  <target dev='vda' bus='virtio'/>
+</disk>
+```
+<!-- .element class="column fragment" --> 
 
 * **File**
   * Contained in a local folder
@@ -49,7 +31,19 @@ Note:
   * Usual format: qcow2
   * May be contained in a pool
 
-<!-- .element class="col2 fragment" -->
+<!-- .element class="column fragment" -->
+
+* **Volume**
+  * Contained in a pool
+  * partition, LV, Rados or iSCSI volume
+
+<!-- .element class="column fragment" -->
+
+**Pool**: unit containing files or volumes to be used as VM disks
+<!-- .element class="fragment" -->
+
+**Driver**: libvirt code handling actual storage actions. One for each pool type.
+<!-- .element class="fragment" -->
 
 
 <!-- .slide: data-state="normal" id="storage-ui" data-timing="20s" data-menu-title="Storage UI" -->
